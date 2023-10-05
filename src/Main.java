@@ -10,6 +10,7 @@ public class Main {
         boolean moveOne = false;
         boolean moveTwo = false;
         boolean done = false;
+        boolean playAgain = false;
         System.out.println("Rock Paper Scissors. R for Rock, P for Paper, S for Scissors");
         do {
             do {
