@@ -74,14 +74,22 @@ public class Main {
             }
             Scanner play = new Scanner(System.in);
             System.out.println("Would you like to play again?");
-            if (play.hasNextLine()) {
+            do{
+                playAgain = false;
                 yesorno = play.nextLine();
-                if (yesorno == "Y") {
+                if (yesorno.equalsIgnoreCase("Y")) {
                     done = false;
-                } else if (yesorno == "N") {
+                    playAgain = true;
+                } else if (yesorno.equalsIgnoreCase("N")) {
                     done = true;
+                    playAgain = true;
+                    System.out.println("Game complete");
+                }
+                else {
+                    System.out.println("Invalid input");
                 }
             }
+            while(!playAgain);
         }
         while (!done);
     }
